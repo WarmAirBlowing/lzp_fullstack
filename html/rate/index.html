@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2109882_oja2n5i8la.css">
+    <title>星级打分</title>
+    <style>
+        .word{
+            width: 200px;
+            margin: 10px auto;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            right: 25px;
+        }
+        /*去掉默认样式*/
+        input{
+            -webkit-appearance: none;/*兼容谷歌浏览器,去掉默认样式*/
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .rate-content{
+            width: 200px;
+            margin: 10px auto;
+            display: flex;
+            flex-flow: row-reverse;
+        }
+        input[name="rate"]{
+            font-family: "iconfont";
+            font-size: 30px;
+            padding-right: 10px;
+            transition: all 0.4s ease;
+        }
+        input[name="rate"]::after{
+            content: "\f2d3";
+            color: #999;
+        }
+        input[name="rate"]:hover{
+            transform: scale(1.2);
+        }
+        input[name="rate"]:hover::after{
+            content: "\f0d4";
+            color: #ffa822;
+        }
+        input[name="rate"]:checked::after{
+            content: "\f0d4";
+            color: #ffa822;
+        }
+        input[name="rate"]:checked ~ input[name="rate"]::after{
+            content: "\f0d4";
+            color: #ffa822;
+        }
+        input[name="rate"]:hover ~ input[name="rate"]::after{
+            content: "\f0d4";
+            color: #ffa822;
+        }
+    </style>
+</head>
+<body>
+    <div class="word">星级评分 star rating</div>
+    <div class="rate-content">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+    </div>
+</body>
+</html>

@@ -24,6 +24,7 @@
             display: block;
             /* UI 的锅 */
             width: 184px;
+            margin-top: 10px;
             margin-left: auto;
             margin-right: auto;
             padding: 8px 24px;
@@ -39,13 +40,28 @@
         .weui-btn_primary {
             background-color: #07c160;
         }
-        .weui-btn_loading .weui-btn_primary {
+        .weui-btn_loading.weui-btn_primary {
             background-color: #06ae56;
             color: #ffffff;
         }
-        /* modifier */
-        .weui-btn_large {
-
+        .weui-loading {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            animation: weuiLoading 1s steps(12,end) infinite;
+            background: transparent url("./img/loading.svg") no-repeat;
+            background-size: 100%;
+        }
+        @keyframes weuiLoading {
+            0%{ 
+                -webkit-transform: rotate3d(0,0,1,0deg);
+                transform: rotate3d(0,0,1,0edg);
+                }
+            100%{ 
+                -webkit-transform: rotate3d(0,0,1,360deg);
+                transform: rotate3d(0,0,1,360edg);
+                }
         }
     </style>
 </head>
@@ -61,7 +77,7 @@
     Modifier   用' _ ' 表示
     -->
     <a href="javascript:;" class="weui-btn weui-btn_primary">页面主操作</a>
-    <a href="javascript:;" class="weui-btn_primary weui-btn_loading">
+    <a href="javascript:;" class="weui-btn weui-btn_primary weui-btn_loading">
         <i class="weui-loading"></i>页面主操作
     </a>
 

@@ -13,7 +13,7 @@ Beverage.prototype.pureInCup = function() {
 // 添加调味品
 Beverage.prototype.addCondiments = function() {
 }
-Beverage.prototype.init = function {
+Beverage.prototype.init = function () {
     this.boilWater();
     this.brew();
     this.pureInCup();

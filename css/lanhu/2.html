@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 兄弟选择器 */
+        li + li::before {
+            content: '|';
+        }
+
+        /* 优先级
+        !important:         1-0-0-0-0
+        行内:                  1-0-0-0
+        id:                     1-0-0
+        attr:[type="text"]      0-1-0
+        tag: div li             0-0-1 */
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>MIUI</li>
+        <li>EMUI</li>
+        <li>IOT</li>
+    </ul>
+</body>
+</html>

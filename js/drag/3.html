@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻转元素</title>
+    <style>
+        /* ul {
+            display: flex;
+            list-style-type: none;
+            flex-direction: row-reverse;
+            position: absolute;
+            left: 0;
+        } */
+    </style>
+</head>
+<body>
+    <ul onclick="reverse()">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <!-- css:flex 调整元素顺序 -->
+    <!-- js: 选中所有 li ,reverse,再插到ul里面 -->
+    <script>
+        function reverse() {
+            let ul = document.querySelector('ul');
+            // Array.prototype.slice.call(arguments)能将有length属性的对象转换为数组
+            let li = Array.prototype.slice.call(document.querySelectorAll('li'),0);//拿到的是伪数组，需要处理一下
+            li.reverse();
+            for(let i = 0; i < li.length; i++) {
+                ul.appendChild(li[i]);
+            } 
+        }
+        
+    </script>
+</body>
+</html>

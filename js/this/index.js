@@ -68,3 +68,9 @@ var bar = obj.foo
 var a = 'hello'
 
 bar()
+
+function Father () {
+    this.naem = name
+    this.age = this.age
+    this.sex = sex
+}

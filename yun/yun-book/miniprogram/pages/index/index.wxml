@@ -1,0 +1,8 @@
+<!--index.wxml-->
+
+<!-- 栅格系统 -->
+<van-row gutten="20">
+  <van-col span="8" offset="12">
+    <van-button type="primary" bind:click="scanCode">扫码加书</van-button>
+  </van-col>
+</van-row>

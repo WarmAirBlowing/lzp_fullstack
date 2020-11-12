@@ -9,7 +9,7 @@ boolean null undefined number string symbol
 原始类型存的是值
 对象类型存的是地址（指针）
 
-# typeof能正确潘判断的类型是？
+# typeof能正确判断的类型是？
 typeof 只能判断原始类型（null除外）
 instanceof 只能判断引用类型
 
@@ -35,3 +35,18 @@ instanceof.js
     加法：运算中其中有一方为字符串，另一方为一定会转换成字符串
           如果一方不是数字或字符串，那就会把它转换成数字或字符串进行运算
     除加法外的运算，只要其中一方是数字，另一方一定会转为数字来运算
+
+# == 和 === 的区别 (index2.js)
+      简单来说： == 代表相同， ===代表严格相同
+      == 进行比较时会进行数据类型转换
+
+# 什么是闭包 (index3.js)
+
+# 深浅拷贝 (copy.js)
+Object.assign() 如果拷贝的属性是原始值类型，那么是深拷贝，如果是引用类型，那么是浅拷贝
+
+JSON.parse(JSON.stringify()) 的缺陷：
+1. 会忽略undefined
+2. 会忽略Symbol
+3. 不能序列化函数
+4. 不能解决循环引用的对象

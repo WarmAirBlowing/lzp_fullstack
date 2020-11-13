@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li id="li2">2</li>
+        <li>3</li>
+    </ul>
+    <ul id="ul2"></ul>
+    <script>
+        document.querySelector('#ul2').appendChild(document.querySelector('#li2'))
+
+        var intersection = function(nums1, nums2) {
+            let map = new Map(); // {key,value}
+            let set = new Set(); // 不重复的
+            nums2.forEach((item) => {
+                map.set(item,true);
+            }) 
+            for(let num of nums1) {
+                if(map.has(num)) {
+                    set.add(num);
+                }
+            }
+            return Array.from(set.values())
+        }
+    </script>
+</body>
+</html>

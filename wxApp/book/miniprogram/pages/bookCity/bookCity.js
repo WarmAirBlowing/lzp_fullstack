@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hotData: []
+    hotData: [],
+    classifyData: []
   },
   getList() {
     wx.showLoading({
@@ -15,13 +16,23 @@ Page({
       name: 'getList',
       data: {}
     }).then(res => {
-      console.log(res);
+      // console.log(res);
       wx.hideLoading();
       const result = res.result || {}
       this.setData({
-        hotData: result.hotData
+        hotData: result.hotData,
+        classifyData: result.classifyData
       })
+      console.log(this.data.classifyData);
     })
+  },
+  toReading(e) {
+    // 点击事件自带的操作 通过设置 data-xxx 属性 获得 xxx 的值
+    let url = e.currentTarget.dataset.url
+    wx.navigateTo({
+      url: `../bookSection/bookSection?url=${url}`,
+    })
+    // console.log(e);
   },
 
   /**

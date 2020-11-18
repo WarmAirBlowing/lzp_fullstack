@@ -1,0 +1,52 @@
+<script>
+    // [5,3,4,-1,-2,9,-8]
+    // 5
+    // [-8,3,4,-1,-2,9,-8]
+    // function partition(arr) {
+    //     let privt = arr[0];
+    //     let i = 0,j = arr.length - 1;
+    //     while( i < j ) {
+    //         // 在右边找到 < privt
+    //         while(arr[j] >= privt) {
+    //             j--;
+    //         }
+
+    //         arr[i] = arr[j]
+    //         // 在左边找到 > privt
+    //         while(arr[i] <= privt) {
+    //             i++;
+    //         }
+    //         arr[j] = arr[i]
+    //     }
+    //     arr[i] = privt
+    // }
+
+    // 1 0 ~ len - 1   i === j 
+    function partition(arr,left,right) {
+        if(left >= right) return
+        let privt = arr[0];
+        let i = 0,j = arr.length - 1;
+        while( i < j ) {
+            // 在右边找到 < privt
+            while(arr[j] >= privt && i < j) {
+                j--;
+            }
+
+            arr[i] = arr[j]
+            // 在左边找到 > privt
+            while(arr[i] <= privt && i < j) {
+                i++;
+            }
+            arr[j] = arr[i]
+        }
+        arr[i] = privt
+        partition(arr,left,i - 1);
+        partition(arr,i + 1,right);
+    }
+
+    function sort(arr) {
+        partition(arr,0,arr.length - 1);
+        return arr;
+    }
+    console.log(sort([-1,-2,-4,6,9,-9]));
+</script>

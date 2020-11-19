@@ -33,7 +33,7 @@
 <!-- 最新章节 -->
 <view class="lastsection">
 	<view class="last">最新章节</view>
-	<view class="section" wx:for="{{lastData}}" wx:key="index" data-url="{{item.sectionUrl}}" bindtap="navtoUrl">{{item.sectionName}}</view>
+	<view class="section" wx:for="{{lastData}}" wx:key="index" data-url="{{item.sectionUrl}}" bindtap="navtoUrl">{{item.sectionname}}</view>
 </view>
 <!-- 所有章节 -->
 <view class="lastsection">
@@ -51,7 +51,6 @@
 				第{{pageArray[page].num - 1}}页
 			</view>
 		</picker>
-		  
 	</view>
 	<view class="next">
 		<button type="warn" size="mini" bindtap="nextPage" disabled="{{nextAble}}">下一页</button>

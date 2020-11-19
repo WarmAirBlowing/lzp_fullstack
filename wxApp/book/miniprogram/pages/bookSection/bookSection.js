@@ -54,7 +54,7 @@ Page({
     this.getSelection(this.data.next)
   },
   bindPickerChange(e) {
-    // console.log(e);
+    console.log(e);
     let page = parseInt(e.detail.value) 
     if (page !== this.page) {
       this.setData({
@@ -66,7 +66,7 @@ Page({
   },
   // 去看小说
   navtoUrl(e) {
-    console.log(e);
+    // console.log(e);
     let url = e.currentTarget.dataset.url
     // 已经存在书架的书，记录阅读状态
     if(url) {
@@ -95,11 +95,13 @@ Page({
     })
   },
   joinBook(e) {
+    // console.log(e);
     let url = e.currentTarget.dataset.url
     db.collection('book').where({
       userId: app.globalData.openid,
       bookName: this.data.bookDetailData.name
     }).get().then(res => {
+      console.log(res);
       const data = res.data[0] || []
       if(data.length == 0) { // 没有加入过书架
         db.collection('book').add({
@@ -130,7 +132,7 @@ Page({
    */
   onLoad: function (options) {
     // options 拿到了跳转过程带过来的参数
-    // console.log(options);
+    // console.log(options); // {url: "/book_4772/"}
     const { url } = options // es6解构 相当于 const url = options.url
     this.getSelection(url)
   },

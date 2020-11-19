@@ -1,2 +1,13 @@
 <!--miniprogram/pages/list/list.wxml-->
-<text>miniprogram/pages/list/list.wxml</text>
+<view class="container">
+	<view class="myBook">我的书架</view>
+	<!-- bindlongpress 长按删除事件 -->
+	<view class="item" wx:for="{{bookItem}}" wx:key="index" data-name="{{item.bookName}}" data-imgUrl="{{item.imgurl}}" data-url="{{item.bookUrl}}" bindtap="navTo" bindlongpress="delete">
+		<view class="left">
+			<image src="{{item.imgurl}}"></image>
+		</view>
+		<view class="right">
+			<text>{{item.bookName}}</text>
+		</view>
+	</view>
+</view>

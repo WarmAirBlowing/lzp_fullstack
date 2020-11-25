@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.common.dev.js"></script>
+    <title>Document</title>
+    <style>
+        [v-cloak] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div v-if="isLogin">
+            {{msg}}
+        </div>
+        <div v-else>
+            {{msg2}}
+        </div> -->
+        <!-- <div v-show="isLogin">
+            {{msg}}
+        </div> -->
+        <!-- <ul class="news">
+            <li class="item" v-for="(item,index) in news" :key="index">{{item.title}}</li>
+        </ul> -->
+        <!-- <span>{{msg}}</span> - <span v-text="msg2"></span> - <span v-html="msg3"></span> -->
+        <!-- <div class="count">
+            本次得分：{{count}}
+            <button @click="add">加分</button>
+            <button v-on:click="reduce">减分</button>
+        </div> -->
+        <!-- <div class="message">
+            <p>文本内容：{{message}}</p>
+            <p>
+                <input type="text" v-model="message">
+            </p>
+        </div> -->
+        <!-- <div class="img">
+            <img v-bind:src="imgUrl" alt="">
+        </div> -->
+        <!-- <div v-pre>{{msg}}</div> -->
+        <!-- <div v-cloak>{{msg}}</div> -->
+        <!-- <div>
+            <p v-once>第一次绑定的值：{{message}}</p>
+            <input type="text" v-model="message">
+        </div> -->
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello world',
+                isLogin: false,
+                msg2: '你好',
+                msg3: '<h2>hi vue</h2>',
+                news: [
+                    { title: '"空降"不到一周 韩俊任吉林代省长 曾是刘鹤"副手"' },
+                    { title: '上门女婿成村霸，敲诈勒索故意纵火还打伤司法人员' },
+                    { title: 'X光显示肚子内有异物 港媒:黄之锋被关医院单人囚室' },
+                    { title: '特朗普突然出手，举行了史上最短一次记者会！' }
+                ],
+                count: 0,
+                message: '',
+                imgUrl: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3363295869,2467511306&fm=26&gp=0.jpg'
+            },
+            created() {
+                this.msg = 'hello vue'
+            },
+            methods: {
+                add() {
+                    this.count++
+                },
+                reduce() {
+                    this.count--
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

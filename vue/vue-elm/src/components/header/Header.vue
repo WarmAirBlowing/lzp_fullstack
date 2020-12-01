@@ -31,7 +31,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import SupportIco from '@/components/support-ico/Support-ico'
 export default {

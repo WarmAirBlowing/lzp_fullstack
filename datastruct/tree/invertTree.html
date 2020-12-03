@@ -1,0 +1,10 @@
+<script>
+  // leetcode 226
+  var invertTree = function(root) {
+    if(!root) return;
+    // es6 解构赋值
+    [root.left, root.right] = [root.right, root.left]
+    invertTree(root.left)
+    invertTree(root.right)
+  };
+</script>

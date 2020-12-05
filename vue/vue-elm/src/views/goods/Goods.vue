@@ -36,6 +36,10 @@
                     <span class="now">￥{{foodItem.price}}</span>
                     <span class="old" v-if="foodItem.oldPrice">￥{{foodItem.oldPrice}}</span>
                   </div>
+                  <!-- + -->
+                  <div class="cartcontrol-wrapper">
+                    <cart-control :foodItem="foodItem"></cart-control>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -44,6 +48,7 @@
       </div>
     </div>
     <!-- 购物车 -->
+    <shop-cart :selectFoods="selectFoods" :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice"></shop-cart>
   </div>
 </template>
 
@@ -51,6 +56,8 @@
 import { getGoods } from '@/api/index'
 import BScroll from 'better-scroll'
 import SupportIco from '@/components/support-ico/Support-ico'
+import ShopCart from '@/components/shop-cart/Shop-cart'
+import CartControl from '@/components/cart-control/Cart-control'
 
 export default {
   data () {
@@ -59,6 +66,36 @@ export default {
       // currentIndex: 0,
       listHeight: [],
       scrollY: 0
+    }
+  },
+  props: {
+    seller: {
+      type: Object
+    }
+  },
+  computed: {
+    currentIndex() {
+      for (let i = 0; i < this.listHeight.length; i++) {
+        let height1 = this.listHeight[i]
+        let height2 = this.listHeight[i + 1]
+        if(!height2 || (this.scrollY >= height1 && this.scrollY < height2)) {
+          return i
+        }
+      }
+      return 0
+    },
+    selectFoods() {
+      let foods = []
+      for(let good of this.goods) {
+        if(good.foods) {
+          for(let food of good.foods) {
+            if(food.count) {
+              foods.push(food)
+            }
+          }
+        }
+      }
+      return foods
     }
   },
   created () {
@@ -105,19 +142,9 @@ export default {
     }
   },
   components: {
-    SupportIco
-  },
-  computed: {
-    currentIndex() {
-      for (let i = 0; i < this.listHeight.length; i++) {
-        let height1 = this.listHeight[i]
-        let height2 = this.listHeight[i + 1]
-        if(!height2 || (this.scrollY >= height1 && this.scrollY < height2)) {
-          return i
-        }
-      }
-      return 0
-    }
+    SupportIco,
+    ShopCart,
+    CartControl
   }
 }
 </script>
@@ -170,6 +197,7 @@ export default {
           width: 100%;
       .content 
         flex 1
+        position: relative;
         .name 
           margin 2px 0 8px 0
           height 14px
@@ -197,4 +225,8 @@ export default {
             text-decoration line-through
             font-size 10px
             color rgb(147, 153, 159)
+        .cartcontrol-wrapper
+          position: absolute;
+          right: 0;
+          bottom: 12px;
 </style>

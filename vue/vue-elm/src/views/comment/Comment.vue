@@ -1,5 +1,7 @@
 <template>
-  <div class="comment">comment</div>
+  <div class="comment">comment
+  tttt
+  </div>
 </template>
 
 <script>

@@ -13,6 +13,11 @@ const routes = [
     path: '/item',
     name: 'item',
     component: () => import('@/views/item/Item')
+  },
+  {
+    path: '/score',
+    name: 'score',
+    component: () => import('@/views/score/Score')
   }
 ]
 

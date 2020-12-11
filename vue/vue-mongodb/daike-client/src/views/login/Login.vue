@@ -21,7 +21,7 @@ export default {
     }
   },
   methods: {
-    showLoginTip(status) {
+    showLoginTip (status) {
       this.$toast.loading({
         message: status,
         forbidClick: true,

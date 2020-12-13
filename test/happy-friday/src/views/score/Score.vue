@@ -42,7 +42,7 @@ export default {
       })
     },
     // 根据得分提示
-    getScoreTip() {
+    getScoreTip () {
       let index = (this.score / this.average) -1
       this.scoreTips = this.scoreTipsArr[index]
     }

@@ -33,7 +33,7 @@ export default {
     this.getScoreTip()
   },
   methods: {
-    computedScore() {
+    computedScore () {
       this.answerId.forEach((item) => {
         if(item === 1) {
           console.log(item);

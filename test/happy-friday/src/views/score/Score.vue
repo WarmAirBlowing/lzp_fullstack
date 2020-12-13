@@ -36,7 +36,7 @@ export default {
     computedScore () {
       this.answerId.forEach((item) => {
         if(item === 1) {
-          console.log(item);
+          // console.log(item);
           this.score += this.average
         }
       })

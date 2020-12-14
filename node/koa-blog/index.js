@@ -17,7 +17,7 @@ const sessionMysqlConfig = {
 }
 
 // 配置session中间件
-app.use(session({ 
+app.use( session({ 
   key: 'USER_SID',
   store: new mysqlStore(sessionMysqlConfig)
 }))

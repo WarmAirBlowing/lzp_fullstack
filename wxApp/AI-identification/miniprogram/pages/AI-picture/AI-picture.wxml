@@ -22,7 +22,7 @@
     <view class="ai-item-name">动物识别</view>
   </view>
   <view class="ai-item">
-    <view class="ai-item-img"></view>
+    <view class="ai-item-img"> </view>
     <view class="ai-item-name">植物识别</view>
   </view>
   <view class="ai-item">

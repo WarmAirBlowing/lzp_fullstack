@@ -1,0 +1,33 @@
+<!--miniprogram/pages/AI-picture/AI-picture.wxml-->
+<view class="img-container">
+  <image class="" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2553958309,647040149&fm=11&gp=0.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+</view>
+<view class="ai-item-container">
+  <view class="ai-item">
+    <view class="ai-item-img">
+    <image class="" src="../../images/logo.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+      </view>
+    <view class="ai-item-name">logo商标识别</view>
+  </view>
+  <view class="ai-item">
+    <view class="ai-item-img"></view>
+    <view class="ai-item-name">菜品识别</view>
+  </view>
+  <view class="ai-item">
+    <view class="ai-item-img"></view>
+    <view class="ai-item-name">车型识别</view>
+  </view>
+  <view class="ai-item">
+    <view class="ai-item-img"></view>
+    <view class="ai-item-name">动物识别</view>
+  </view>
+  <view class="ai-item">
+    <view class="ai-item-img"></view>
+    <view class="ai-item-name">植物识别</view>
+  </view>
+  <view class="ai-item">
+    <view class="ai-item-img"></view>
+    <view class="ai-item-name">果蔬识别</view>
+  </view>
+</view>
+  

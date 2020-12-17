@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/AI-picture/AI-picture",
+    "pages/AI-word/AI-word",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "智能识别AI",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/AI-picture/AI-picture",
+        "iconPath": "./images/picture.png",
+        "selectedIconPath": "./images/picture2.png",
+        "text": "图片识别"
+      },
+      {
+        "pagePath": "pages/AI-word/AI-word",
+        "iconPath": "./images/words.png",
+        "selectedIconPath": "./images/words2.png",
+        "text": "文字识别"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/personal-center.png",
+        "selectedIconPath": "./images/personal-center2.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

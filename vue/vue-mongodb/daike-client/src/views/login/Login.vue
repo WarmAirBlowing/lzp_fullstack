@@ -4,10 +4,11 @@
     <van-cell-group class="box">
       <van-field v-model="username" label="用户名" placeholder="请输入用户名" />
       <van-field v-model="password" label="密码" type="password" placeholder="请输入用密码" />
+      <van-field v-show="!isLogin" v-model="rePassword" label="重复密码" type="password" placeholder="请再次输入用密码" />
     </van-cell-group>
     <van-row>
-      <van-button type="default" size="small">注册</van-button>
-      <van-button type="primary" size="small" class="btn-login" @click="handleLogin">登录</van-button>
+      <van-button type="default" size="small" @click="handleRegister">{{ isLogin ? '注册' : '已有账号'}}</van-button>
+      <van-button type="primary" size="small" class="btn-login" @click="handleLogin">{{ isLogin ? '登录' : '注册并登录'}}</van-button>
     </van-row>
   </div>
 </template>
@@ -17,11 +18,13 @@ export default {
   data () {
     return {
       username: '',
-      password: ''
+      password: '',
+      rePassword: '',
+      isLogin: true
     }
   },
   methods: {
-    showLoginTip (status) {
+    showLoginTip(status) {
       this.$toast.loading({
         message: status,
         forbidClick: true,
@@ -34,7 +37,9 @@ export default {
         username: this.username,
         password: this.password
       }).then(res => {
-        console.log(res);
+        // console.log(res);
+        this.$toast.clear()
+        this.$router.push('/home')
       })
     },
     handleLogin() {
@@ -42,8 +47,29 @@ export default {
         this.$toast.fail('用户名或密码不能为空！')
         return
       }
-      this.showLoginTip('登录中...')
-      this.login()
+      if(this.isLogin) {
+        this.showLoginTip('登录中...')
+        this.login()
+      } else {
+        // 注册
+        if(this.rePassword != this.password) {
+          this.$toast('两次输入的密码不一致！')
+          return
+        }
+        this.showLoginTip('注册登录中...')
+        this.$http.register({
+          username: this.username,
+          password: this.password
+        }).then(res => {
+          console.log(res);
+          this.$toast.clear()
+          this.$router.push('/home')
+        })
+      }
+      
+    },
+    handleRegister() {
+      this.isLogin = !this.isLogin
     }
   }
 }

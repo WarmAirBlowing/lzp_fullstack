@@ -60,7 +60,7 @@ export default {
         this.$http.register({
           username: this.username,
           password: this.password
-        }).then(res => {
+        }).then(res =>  {
           console.log(res);
           this.$toast.clear()
           this.$router.push('/home')

@@ -19,7 +19,7 @@ let dfs = (n) => {
   if(!n) return;
   console.log(n.val);
   dfs(n.left);
-  dfs(n.right) ;
+  dfs(n.right);
 }
 
 dfs(root)

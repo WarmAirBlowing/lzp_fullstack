@@ -10,7 +10,7 @@ function curry(fn, length) {
     if(length > 1) {
       return curry(sub_curry(fn), --length)
     }else{
-      return fn( )
+      return fn()
     }
   }
 }

@@ -24,7 +24,7 @@ function sub_curry(fn) {
 
 function curry(fn, length) {
   length = length || fn.length; // 函数的 length 属性 表示参数个数
-  let slice = Array.pro totype.slice;
+  let slice = Array.prototype.slice;
   return function () {
     if (arguments.length < length) {
       let combined = [fn].concat(slice.call(arguments))

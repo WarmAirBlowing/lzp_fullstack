@@ -28,7 +28,7 @@ function curry(fn, length) {
   return function () {
     if (arguments.length < length) {
       let combined = [fn].concat(slice.call(arguments))
-      return curry(sub_curry.apply(this, combine d), length - arguments.length)
+      return curry(sub_curry.apply(this, combined), length - arguments.length)
     } else {
       return fn.apply(this, arguments)
     }

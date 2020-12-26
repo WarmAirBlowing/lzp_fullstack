@@ -43,7 +43,7 @@ export default VueRouter
 //   args.unshift(this) // 将Vue对象拼接到数组头部
 //   if(typeof plugin.install === 'function') {
 //     //如果组件是对象，且提供install方法，调用install方法将参数数组传入，改变`this`指针为该组件
-//     plugin.ins tall.apply(plugin, args)
+//     plugin.install.apply(plugin, args)
 //   }else if(typeof plugin === 'function') {
 //     //如果传入组件是函数，这直接调用，但是此时的`this`指针只想为`null` 
 //     plugin.apply(null, plugin, args)

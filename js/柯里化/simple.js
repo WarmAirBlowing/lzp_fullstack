@@ -8,7 +8,7 @@ function curry(fn, length) {
   length = length || 4
   return function() {
     if(length > 1) {
-      ret urn curry(sub_curry(fn), --length)
+      return curry(sub_curry(fn), --length)
     }else{
       return fn()
     }

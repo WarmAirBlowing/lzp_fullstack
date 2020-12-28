@@ -14,7 +14,7 @@ function MyPromise(fn) {
     if (that.state === PENDING) {
       that.state = RESOLVED
       that.value = value
-      that.resolvedCallbacks.map(cb => {
+      that.resolvedCallback s.map(cb => {
         cb(that.value)
       })
     }

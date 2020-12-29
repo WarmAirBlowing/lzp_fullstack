@@ -2,7 +2,7 @@
 //   let args = [].slice.call(arguments, 1) // 拿到fn的参数
 //   return function () {
 //     let newArgs = args.concat([].slice.call(arguments))
-//     return fn.apply(this, n ewArgs)
+//     return fn.apply(this, newArgs)
 //   }
 // }
 

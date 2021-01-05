@@ -3,17 +3,20 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 export default {
   setup() {
     let loading = ref('')
     let i = 0
-    let arr = '. .. ... ..'
+    let arr = ['.', '..', '...', '..']
     let timer = setInterval(() => {
       loading.value = arr[i]
       i = (i + 1) % 4
     }, 350);
     
+    onUnmounted(() => {
+      clearInterval(timer)
+    })
     return {
       loading
     }

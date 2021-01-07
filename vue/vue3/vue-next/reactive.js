@@ -13,7 +13,7 @@ function reactive(target) {
   return createReactiveObject(target)
 }
 
-function createReactiveObject(target) {
+function createR eactiveObject(target) {
   if ( !isObject(target)) { // 如果不是对象 就直接返回
     return target
   }

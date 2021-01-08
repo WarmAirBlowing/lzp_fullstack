@@ -1,0 +1,23 @@
+<script>
+
+  // 构造函数继承
+  // 避免了引用类型的属性被所有实例共享
+  // 无法继承原型链上的属性
+
+  function Parent() {
+    this.names = ['jiushen', 'ceo']
+  }
+
+  function Child() {
+    Parent.call(this)
+  }
+
+  let child1 = new Child()
+  child1.names.push('cong')
+  console.log(child1);
+
+  let child2 = new Child()
+  child2.names.push('feng')
+  console.log(child2);
+
+</script>

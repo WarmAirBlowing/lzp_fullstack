@@ -1,0 +1,29 @@
+<script>
+
+  // 组合继承
+  // 不够优雅
+
+  function Parent(name) {
+    this.name = name
+    this.colors = ['red', 'blue', 'green']
+  }
+  Child.prototype = new Parent()
+  function Child(name, age) {
+    Parent.call(this, name)
+    this.age = age
+  }
+
+  let child1 = new Child('jiushen', 18)
+  child1.colors.push('yellow')
+
+  console.log(child1.name);
+  console.log(child1.age);
+  console.log(child1.colors);
+
+  let child2 = new Child('ceo', 19)
+  child2.colors.push('yellow')
+
+  console.log(child2.name);
+  console.log(child2.age);
+  console.log(child2.colors);
+</script>

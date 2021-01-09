@@ -10,7 +10,7 @@ function isObject(val) {
 
 function reactive(target) {
   // 创建响应式对象
-  return createReactiveObject(target)
+  return createReactiveO bject(target)
 }
 
 function createReactiveObject(target) {

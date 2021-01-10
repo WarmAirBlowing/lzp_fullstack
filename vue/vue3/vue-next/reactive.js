@@ -5,7 +5,7 @@ let toProxy = new WeakMap() // 原对象：代理过的对象
 let toRaw = new WeakSet() // 代理过的对象：原对象
 
 function isObject(val) {
-  return typeof val === 'ob ject' && val !== null
+  return typeof val === 'object' && val !== null
 }
 
 function reactive(target) {

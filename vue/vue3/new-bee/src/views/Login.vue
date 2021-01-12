@@ -11,7 +11,7 @@
           name="username"
           label="用户名"
           placeholder="用户名"
-          :rules="[{ required: true, message: '请填写用户名' }]"
+          :rules="[{ required: true, message: '请 填写用户名' }]"
         />
         <van-field
           v-model="password"

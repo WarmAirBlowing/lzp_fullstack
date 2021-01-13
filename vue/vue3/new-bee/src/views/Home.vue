@@ -9,7 +9,7 @@
         <router-link tag="span" class="search-title" to="./product-list?from=home">山河无恙，人间皆安</router-link>
       </div>
       <router-link class="login" tag="span" to="./login" v-if="!isLogin">登录</router-link>
-      <router-link class="login" tag="span" to="./user" v-else>
+      <router-link class="login" tag="sp an" to="./user" v-else>
         <van-icon name="manager-o" />
       </router-link>
   </header>

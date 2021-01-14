@@ -15,7 +15,7 @@
   </header>
   <!-- 轮播 -->
   <swiper :list="swiperList"></swiper>
-  <!-- 分类列表 -- >
+  <!-- 分类列表 -->
   <div class="category-list">
     <div v-for="item in categoryList" :key="item.categoryId">
       <img :src="item.imgUrl" alt="">

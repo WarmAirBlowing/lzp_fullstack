@@ -5,7 +5,7 @@
     </router-link>
     <div class="header-search">
         <span class="app-name">新蜂商城</span>
-        <i class="icon font icon-sousuo"></i>
+        <i class="iconfont icon-sousuo"></i>
         <router-link tag="span" class="search-title" to="./product-list?from=home">山河无恙，人间皆安</router-link>
       </div>
       <router-link class="login" tag="span" to="./login" v-if="!isLogin">登录</router-link>

@@ -15,7 +15,7 @@
                 <span>{{item.goodsName}}</span>
                 <span>x{{item.goodsCount}}</span>
               </div>
-              <div class="goo d-btn">
+              <div class="good-btn">
                 <div class="price">{{item.sellingPrice}}</div>
                 <van-stepper integer min="1" max="5" :model-value="item.goodsCount" :name="item.cartItemId" @change="numChange"/>
               </div>

@@ -3,7 +3,7 @@
     <router-view class="router-view" v-slot="{Component}">
       <transition :name="transitionName">
         <component :is="Component" />
-      </transition> 
+      </transition>
     </router-view>
   </div>
 </template>
@@ -78,5 +78,4 @@ html, body {
 .van-badge--fixed {
   z-index: 1000;
 }
-
 </style>

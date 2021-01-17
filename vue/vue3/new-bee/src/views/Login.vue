@@ -79,7 +79,7 @@ import { reactive, toRefs, ref } from 'vue'
 import vueImgVerify from '@/components/VueImgVerify'
 import { Toast } from 'vant'
 import { register, login } from '@/service/user'
-import md5 from 'js-md5'
+import md5 from 'js-md5' // 加密
 import { setLocal } from '@/common/js/utils'
 import { useRouter } from 'vue-router'
 export default {
@@ -128,8 +128,8 @@ export default {
           "password": values.password1
         })
         Toast.success('注册成功')
-        state.type = 'login'
-        state.verify = ''
+        state.type = 'login' // 去到登录页面
+        state.verify = '' //清空验证码
       }
     }
 
@@ -210,4 +210,4 @@ export default {
       }
     }
   }
-</style>  
+</style>

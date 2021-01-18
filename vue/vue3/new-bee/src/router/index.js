@@ -29,6 +29,21 @@ const routes = [
     name: 'cart',
     component: () => import('@/views/Cart.vue')
   },
+  {
+    path: '/create-order',
+    name: 'createOrder',
+    component: () => import('@/views/CreateOrder.vue')
+  },
+  {
+    path: '/address',
+    name: 'address',
+    component: () => import('@/views/Address.vue')
+  },
+  {
+    path: '/address-edit',
+    name: 'addressEdit',
+    component: () => import('@/views/AddressEdit.vue')
+  },
 ]
 
 const router = createRouter({

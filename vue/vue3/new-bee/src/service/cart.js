@@ -12,6 +12,6 @@ export function modifyCart(params) {
   return axios.put('/shop-cart', params)
 }
 
-export function deleteCart(params) {
+export function deleteCartItem(id) {
   return axios.delete(`/shop-cart/${id}`)
 }

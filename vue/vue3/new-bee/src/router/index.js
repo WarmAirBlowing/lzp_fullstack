@@ -44,6 +44,11 @@ const routes = [
     name: 'addressEdit',
     component: () => import('@/views/AddressEdit.vue')
   },
+  {
+    path: '/user',
+    name: 'User',
+    component: () => import('@/views/User.vue')
+  },
 ]
 
 const router = createRouter({

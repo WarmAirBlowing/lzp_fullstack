@@ -71,11 +71,11 @@ export default {
     }
 
     // 修改地址
-    const onEdit = () => {
+    const onEdit = (item) => {
       router.push({ path: '/address-edit', query: { type: 'edit', addressId: item.id, from: state.from }})
     }
     return {
-      ...toRefs(state),
+      ...toRefs(state), 
       onAdd,
       select,
       onEdit

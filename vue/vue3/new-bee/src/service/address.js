@@ -9,15 +9,18 @@ export function getDefaultAddress() {
 }
 
 export function getAddressList() {
-  return axios.get(`/address`, { pageNumber: 1, pageSize: 1000})
+  return axios.get(`/address`, { pageNumber: 1, pageSize: 1000 })
 }
 
 // 新增地址
 export function addAddress(params) {
-  return axios.post(`/address`, params)
+  return axios.post('/address', params)
+}
+// 修改地址
+export function EditAddress(params) {
+  return axios.put('/address', params)
 }
 
-// 修改地址
-export function editAddress(params) {
-  return axios.put(`/address`, params)
+export function DeleteAddress(id) {
+  return axios.delete(`/address/${id}`)
 }

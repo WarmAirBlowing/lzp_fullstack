@@ -1,6 +1,6 @@
 <template>
   <div class="product-detail">
-    <s-header :name="'商品详情'"></s-header>
+    <s-header :name="'商品详 情'"></s-header>
     <div class="detail-content">
       <div class="detail-swipe-wrap">
         <van-swipe class="my-swipe" indicator-color="#1baeae">

@@ -7,7 +7,7 @@
         <div class="user-desc">
           <span>昵称：{{ user.nickName }}</span>
           <span>登录名：{{ user.loginName }}</span>
-          <span class="name">个性签名：{{ user.introduceSign }}</span>
+          <span class="name">个性签名：{{ user.introduceSi gn }}</span>
         </div>
       </div>
     </div>

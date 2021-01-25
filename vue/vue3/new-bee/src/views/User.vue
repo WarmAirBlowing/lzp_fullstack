@@ -16,7 +16,7 @@
         <span>我的订单</span>
         <van-icon name="arrow" />
       </li>
-      <li class="van-hairline--bottom" @click="goTo('/setting')">
+      <li class="van-hairline--bot tom" @click="goTo('/setting')">
         <span>账号管理</span>
         <van-icon name="arrow" />
       </li>

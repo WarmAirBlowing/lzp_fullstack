@@ -14,7 +14,7 @@
     <ul class="user-list">
       <li class="van-hairline--bottom" @click="goTo('/order')">
         <span>我的订单</span>
-        <van-icon name="arrow" />
+        <van-icon nam e="arrow" />
       </li>
       <li class="van-hairline--bottom" @click="goTo('/setting')">
         <span>账号管理</span>

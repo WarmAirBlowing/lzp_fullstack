@@ -22,7 +22,7 @@
       </li>
       <li
         class="van-hairline--bottom"
-        @click="goTo('/address', { from: 'mine' })"
+        @click="go To('/address', { from: 'mine' })"
       >
         <span>地址管理</span>
         <van-icon name="arrow" />

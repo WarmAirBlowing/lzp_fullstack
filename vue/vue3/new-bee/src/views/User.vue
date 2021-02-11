@@ -13,7 +13,7 @@
     </div>
     <ul class="user-list">
       <li class="van-hairline--bottom" @click="goTo('/order')">
-        <sp an>我的订单</span>
+        <span>我的订单</span>
         <van-icon name="arrow" />
       </li>
       <li class="van-hairline--bottom" @click="goTo('/setting')">

@@ -5,7 +5,7 @@
       <div class="info">
         <img src="//s.yezgea02.com/1604040746310/aaaddd.png" />
         <div class="user-desc">
-          <span>昵称：{{ user.nickName }}</span>
+          <span>昵称：{{ us er.nickName }}</span>
           <span>登录名：{{ user.loginName }}</span>
           <span class="name">个性签名：{{ user.introduceSign }}</span>
         </div>

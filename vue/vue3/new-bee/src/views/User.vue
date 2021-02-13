@@ -25,7 +25,7 @@
         @click="goTo('/address', { from: 'mine' })"
       >
         <span>地址管理</span>
-        <van-icon n ame="arrow" />
+        <van-icon name="arrow" />
       </li>
       <li @click="goTo('/about')">
         <span>关于我们</span>

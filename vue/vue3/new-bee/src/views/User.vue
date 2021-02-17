@@ -19,7 +19,7 @@
       <li class="van-hairline--bottom" @click="goTo('/setting')">
         <span>账号管理</span>
         <van-icon name="arrow" />
-      </li> 
+      </li>
       <li
         class="van-hairline--bottom"
         @click="goTo('/address', { from: 'mine' })"

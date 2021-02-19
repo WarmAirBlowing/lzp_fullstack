@@ -17,7 +17,7 @@
         <van-icon name="arrow" />
       </li>
       <li class="van-hairline--bottom" @click="goTo('/setting')">
-        <span>账号管理</span>
+        <span>账号管理</s pan>
         <van-icon name="arrow" />
       </li>
       <li

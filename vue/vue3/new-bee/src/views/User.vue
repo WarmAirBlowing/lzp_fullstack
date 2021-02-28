@@ -21,7 +21,7 @@
         <van-icon name="arrow" />
       </li>
       <li
-        class="van-hairline--bottom"
+        class="van-hairlin e--bottom"
         @click="goTo('/address', { from: 'mine' })"
       >
         <span>地址管理</span>

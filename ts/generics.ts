@@ -54,7 +54,7 @@ let test: GenericIdentityFn = indentify;
 class Select<T>{
   constructor(private arr: T[]){}
   getItem(index: number): T{
-      return this. arr[index];
+      return this.arr[index];
   }
 }
 

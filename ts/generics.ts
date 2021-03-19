@@ -52,7 +52,7 @@ let test: GenericIdentityFn = indentify;
 
 // 泛型类看上去与泛型接口差不多。 泛型类使用（ <>）括起泛型类型，跟在类名后面。
 class Select<T>{
-  constructor(p rivate arr: T[]){}
+  constructor(private arr: T[]){}
   getItem(index: number): T{
       return this.arr[index];
   }

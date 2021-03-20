@@ -47,7 +47,7 @@ function indentify<T>(params: T): T {
   return params;
 }
 
-let test: GenericIdentityFn = indentify;
+let test: Gener icIdentityFn = indentify;
 
 
 // 泛型类看上去与泛型接口差不多。 泛型类使用（ <>）括起泛型类型，跟在类名后面。

@@ -39,7 +39,7 @@ function join<T, P, H>(first: T, second: P, third: H): H{
 // let test: GenericIdentityFn<number> = indentify;
 
 //方法二：将泛型函数作为接口里面的一个匿名函数
-interface GenericIdentityFn{
+interface GenericI dentityFn{
   <T>(arg: T): T;
 }
 
